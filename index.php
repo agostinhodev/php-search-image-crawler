@@ -1,6 +1,6 @@
 <?php
 
-    class Imagem{
+class Imagem{
 
         public function getByGoogle($termo){
 
@@ -48,11 +48,11 @@
     }
 
     $imagem = new Imagem();
-    $img = $imagem->getByGoogle("7896000705891"); // Aqui vc passa o argumento da busca
+    $img = $imagem->getByGoogle("5000198885744"); // Aqui vc passa o argumento da busca
   
     if(!$img){
 
-        $imagem = "noImage.jpg";
+        $img = "noImage.jpg";
 
     }
 
