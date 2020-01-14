@@ -3,6 +3,8 @@
 class Imagem{
 
         public function getByGoogle($termo){
+            
+            $termo = trim(str_replace(" ", "+", $termo));
 
             //Abre uma conexão com o Google Images
             $url = "https://www.google.com/search?q=". $termo ."&tbm=isch";
@@ -48,7 +50,7 @@ class Imagem{
     }
 
     $imagem = new Imagem();
-    $img = $imagem->getByGoogle("5000198885744"); // Aqui vc passa o argumento da busca
+    $img = $imagem->getByGoogle("CERVEJA BRAHMA 300ML RETORN"); // Aqui vc passa o argumento da busca
   
     if(!$img){
 
