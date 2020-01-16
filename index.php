@@ -22,7 +22,6 @@ class Imagem{
             
             $imagem = NULL;
 
-            $i = 0;
             //Aqui teremos várias imgs no array $result
             //É necessário percorrê-lo para buscar as imagens válidas
             for($i = 0; $i < count($result); $i++){
