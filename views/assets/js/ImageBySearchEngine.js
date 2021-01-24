@@ -78,7 +78,7 @@ class ImageBySearchEngine{
         };
 
         let ajax = axios.create();
-        ajax.get("/controllers/search.php", {
+        ajax.get("controllers/search.php", {
 
             params
 
