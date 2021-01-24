@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <title>PHP Search Image Crawler</title>
+</head>
+<body>
+
+<div class="content text-center">
+
+    <div class="container">
+
+        <div class="title" style="margin-top: 30px">
+
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR8MoeKG3NsDIy-nHk9sYOeCcNCw-6tNIyShA&usqp=CAU" class="img-fluid">
+            <hr>
+
+            <h3>PHP Search Image Crawler</h3>
+            <h5>Using Google Images Search And Bing Images Search Service</h5>
+
+        </div>
+
+        <form id="form_search">
+            <div class="form-group">
+
+                <input
+                    type="text"
+                    class="form-control"
+                    id="query"
+                    placeholder="Type here the term you want to search for"
+                    required
+                    autocomplete="off"
+                >
+
+            </div>
+
+            <div class="form-group">
+                <label for="limit">How much images do you want to show in result?</label>
+                <select class="form-control" required id="limit" >
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10" selected>10</option>
+                </select>
+
+            </div>
+
+            <div class="form-group">
+                <label for="search_engine">Please select a web search engine:</label>
+
+                <select
+                    class="form-control"
+                    required
+                    id="search_engine"
+
+                >
+                    <option value="bing">Bing Images</option>
+                    <option value="google">Google Images</option>
+
+                </select>
+
+            </div>
+
+            <button type="submit" class="btn btn-primary">Search</button>
+
+        </form>
+
+    </div>
+
+    <div id="result" style="margin-top: 15px;"></div>
+
+
+    <div class="spinner-border text-info" role="status" style="display: none; margin-top: 15px;" id="containerLoading">
+        <span class="sr-only">Loading...</span>
+    </div>
+
+
+    <div class="container alert alert-info" style="margin-top: 15px">
+
+        <p><strong>Notice</strong></p>
+        <p>The way like you will use this tool it's not my responsability.
+            I built this simple script to show how you can implement a crawler using PHP.
+            I prefeer to use Google Images because it's a good example of how we can manipule elements on page. However we could use other sites like Google Maps, Bing Images, Instagram, Facebook, etc. <a href="https://policies.google.com/terms?hl=en&fg=1">Google Terms of Service</a> and <a href="https://www.microsoft.com/en-us/servicesagreement/">Microsoft Services Agreement
+            </a> can explain more to you about their Policys And Termos. Please be honest</p>
+
+    </div>
+
+</div>
+
+<script id="templateResults"  type="x-handlebars-template">
+
+    <div class="container text-center">
+        <div class="col-md-12">Results:</div>
+
+        <div class="row">
+            {{#each images}}
+
+                <div class="col-sm">
+                    <a href="{{uri}}" target="_blank"><img src="{{uri}}"></a>
+                </div>
+
+            {{/each}}
+        </div>
+    </div>
+
+</script>
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
+<script src="views/assets/js/ImageBySearchEngine.js"></script>
+
+</body>
+</html>
