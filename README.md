@@ -50,6 +50,47 @@ try{
 }
 ```
 
+You will receive a array like this
+```php
+array(10) {
+    [0]=>
+    array(1) {
+        ["uri"] => 
+        string(121) "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSnFm8xIu_nPgVZ7Xw-w5wClwiBExSJDeMNANRLeu8hmy7xLQgXuaY8Yp4tqcc&s"
+    }
+    [1]=>
+    array(1) {
+        ["uri"]=>
+        string(121) "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRDIa6b2ZyHQSGpBBVBi3Sf50AEaUhCM-CJyAI4qTm4yvsvvUrHDfw4N9LBCQQ&s"
+    }
+    [2]=>
+    array(1) {
+    ["uri"]=>
+        string(120) "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQgYZXBCpD4K5WjwpiK24HcPewCa9WigE08GMcY7Hf1lPpk1ecJwfiVgZRJQA&s"
+    }
+}
+```
+Or if you prefeer, a JSON like this:
+
+```json
+{
+  "images":[
+    {
+      "uri": "https:\/\/encrypted-tbn0.gstatic.com\/images?q=tbn:ANd9GcSnFm8xIu_nPgVZ7Xw-w5wClwiBExSJDeMNANRLeu8hmy7xLQgXuaY8Yp4tqcc&amp;s"
+    },
+    {
+      "uri": "https:\/\/encrypted-tbn0.gstatic.com\/images?q=tbn:ANd9GcRDIa6b2ZyHQSGpBBVBi3Sf50AEaUhCM-CJyAI4qTm4yvsvvUrHDfw4N9LBCQQ&amp;s"
+    },
+    {
+      "uri": "https:\/\/encrypted-tbn0.gstatic.com\/images?q=tbn:ANd9GcQgYZXBCpD4K5WjwpiK24HcPewCa9WigE08GMcY7Hf1lPpk1ecJwfiVgZRJQA&amp;s"
+    }
+  
+  ]
+  
+}
+
+```
+
 ## Notice
 The way like you will use this tool it's not my responsability. <br>
 I built this simple script for a college work to show how we can implement a crawler using PHP.<br>
