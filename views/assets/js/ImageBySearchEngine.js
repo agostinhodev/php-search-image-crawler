@@ -46,10 +46,12 @@ class ImageBySearchEngine{
 
     }
 
-    handleError()
+    handleError( message )
     {
 
         this.setIsLoading(false);
+        document.getElementById("result").innerHTML = `<div class='container text-center alert alert-danger'>${message}</div>`;
+
 
     }
 
@@ -90,7 +92,11 @@ class ImageBySearchEngine{
         })
         .catch((error)=>{
 
-            this.handleError( error.response.data );
+            let message = typeof error.response.data.message !== "undefined"
+            ? error.response.data.message
+            : "An unknown error has occurred";
+
+            this.handleError( message );
 
         });
 
