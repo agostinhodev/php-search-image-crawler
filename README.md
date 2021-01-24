@@ -15,7 +15,7 @@ This is a simple code to allow you search for images on Web Search Engines like 
 [![image.png](https://i.postimg.cc/PfZvCcRq/image.png)](https://postimg.cc/3W8x6L7M)
 
 
-##How to use in my personal project?
+## How to use in my personal project?
 
 The magic of this code happens on file `services/ImageBySearchEngine.php` which is a Oriented Object file that 
 has a method called `search()`
