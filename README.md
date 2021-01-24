@@ -2,16 +2,16 @@
 
 This is a simple code to allow you search for images on Web Search Engines like Google and Bing using only PHP
 
-##How to test it?
+## How to test it?
 
 * Clone this project
 * Copy your content inside your Apache or Nginx public folder, like `/var/www` or something similar
 * Open your browser
 
-###Example Search Using Bing
+### Example Search Using Bing
 [![image.png](https://i.postimg.cc/bwPxY8Y8/image.png)](https://postimg.cc/Wh9FSBJf)
 
-##Example Search Using Google
+### Example Search Using Google
 [![image.png](https://i.postimg.cc/PfZvCcRq/image.png)](https://postimg.cc/3W8x6L7M)
 
 
@@ -59,7 +59,7 @@ However we could use other sites like Google Maps, Bing Images, Instagram, Faceb
 [Google Terms of Service](https://policies.google.com/terms?hl=en&fg=1) and [Microsoft Services Agreement](https://www.microsoft.com/en-us/servicesagreement/) can explain more to you about their Policys And Terms. <br><br>
 Be an ethical developer!
 
-##Contributing
+## Contributing
 Please refer to each project's style and contribution guidelines for submitting patches and additions. In general, we follow the "fork-and-pull" Git workflow.
 
 * Fork the repo on GitHub
