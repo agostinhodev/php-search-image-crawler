@@ -17,7 +17,7 @@ This is a simple code to allow you search for images on Web Search Engines like 
 
 ## How to use in my personal project?
 
-The magic of this code happens on file `services/ImageBySearchEngine.php` which is a Oriented Object file that 
+The magic of this code happens on file `services/ImageBySearchEngine.php` which is a Object-oriented file that 
 has a method called `search()`
 
 #### To use, you need to create an object as following:
